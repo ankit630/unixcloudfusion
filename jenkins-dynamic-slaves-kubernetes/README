@@ -1,0 +1,4 @@
+Jenkins is the mostly used opensource tool in the world, It’s Master slave architecture is great for scalability to do distributed builds.Master is responsible for configurations, scheduling jobs in slaves.
+Slaves are Jenkins agents its used to execute jobs scheduled by the master.
+
+We will be creating a highly available Jenkins cluster in Kubernetes which would be having the dynamic slaves at run time.

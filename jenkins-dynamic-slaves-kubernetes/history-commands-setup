@@ -1,0 +1,193 @@
+From Root User
+    
+    6  hostnamectl set-hostname jenkins.unixcloudfusion.in
+    7  clear
+    8  curl -fsSL get.docker.com | sh
+    9  docker innfo
+   10  docker info
+   11  clear
+   12  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   13  du -sh minikube-linux-amd64
+   14  install minikube-linux-amd64 /usr/local/bin/minikube
+   15  systemctl start docker
+   16  systemctl enable docker
+   17  su - vagrant
+   18  clear
+   19  minikube start
+
+
+From vagrant user
+
+    2  docker info
+    3  clear
+    4  pwd
+    5  minikube start
+    6  minikube status
+    7  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+    8  install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+    9  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+   10  kubectl version
+   11  kubectl cluster-info
+   12  clear
+   13  sudo apt install -y nfs-server
+   14  clear
+   15  sudo mkdir /data
+   16  sudo chmod 777 /data
+   17  cat <<__EOF__>>/etc/exports
+   18  /data *(rw,sync,no_subtree_check,insecure)
+   19  __EOF__
+   20  sudo cat <<__EOF__>>/etc/exports
+   21  /data *(rw,sync,no_subtree_check,insecure)
+   22  __EOF__
+   23  sudo vim /etc/exports
+   24  clear
+   25  sudo systemctl restart nfs-server.service
+   26  sudo systemctl status nfs-server.service
+   27  exportfs -av
+   28  clear
+   29  sudo exportfs -av
+   30  vim pv-nfs.yaml
+   31  kubectl create -f pv-nfs.yaml
+   32  vim pvc-nfs.yaml
+   33  kubectl create namespace jenkins
+   34  kubectl create -f pvc-nfs.yaml
+   35  apt install nfs-common
+   36  sudo apt install nfs-common
+   37  clear
+   38  showmount -e jenkins.unixcloudfusion.in
+   39  vim jenkins-deployment.yaml
+   40  kubectl create -f jenkins-deployment.yaml
+   41  vim jenkins-deployment.yaml
+   42  kubectl create -f jenkins-deployment.yaml
+   43  vim jenkins-deployment.yaml
+   44  kubectl create -f jenkins-deployment.yaml
+   45  kubectl delete -f jenkins-deployment.yaml
+   46  clear
+   47  vim jenkins-deployment.yaml
+   48  kubectl create -f jenkins-deployment.yaml
+   49  vim jenkins-service.yaml
+   50  kubectl create -f jenkins-service.yaml
+   51  kubectl get all -n jenkins
+   52  kubectl cluster-info
+   53  curl 92.168.49.2:31264
+   54  curl 192.168.49.2:31264
+   55  clear
+   56  kubectl cluster-info
+   57  sudo apt install nginx
+   58  sudo vim /etc/nginx/nginx.conf
+   59  kubectl cluster-info
+   60  sudo vim /etc/nginx/nginx.conf
+   61  kubectl get all -n jenkins
+   62  sudo vim /etc/nginx/nginx.conf
+   63  nginx -t
+   64  sudo nginx -t
+   65  sudo vim /etc/nginx/nginx.conf
+   66  sudo nginx -t
+   67  sudo vim /etc/nginx/nginx.conf
+   68  sudo cd /etc/nginx/conf.d/
+   69  cd /etc/nginx/conf.d/
+   70  ls -ltr
+   71  vim jenkins.conf
+   72  sudo vim jenkins.conf
+   73  sudo nginx -t
+   74  sudo vim /etc/nginx/nginx.conf
+   75  sudo vim jenkins.conf
+   76  nginx -t
+   77  sudo nginx -t
+   78  sudo vim jenkins.conf
+   79  sudo nginx -t
+   80  sudo vim jenkins.conf
+   81  sudo vim /etc/nginx/nginx.conf
+   82  sudo nginx -t
+   83  sudo vim /etc/nginx/nginx.conf
+   84  sudo vim jenkins.conf
+   85  sudo vim /etc/nginx/nginx.conf
+   86  sudo nginx -t
+   87  rm -f jenkins.conf
+   88  sudo rm -f jje
+   89  sudo rm -f jenkins.conf
+   90  sudo nginx -t
+   91  sudo vim /etc/nginx/nginx.conf
+   92  sudo nginx -t
+   93  sudo nginx start
+   94  sudo nginx -s reload
+   95  sudo nginx status
+   96  sudo vim /etc/nginx/nginx.conf
+   97  cd /etc/nginx/
+   98  sudo grep -ir 80 .
+   99  sudo mv ./sites-available/default ./sites-available/default.bak
+  100  sudo nginx -s reload
+  101  sudo mv ./sites-available/default.bak ./sites-available/default
+  102  sudo vim ./sites-available/default
+  103  sudo vim /etc/nginx/nginx.conf
+  104  sudo vim ./sites-available/default
+  105  sudo nginx -t
+  106  sudo vim ./sites-available/default
+  107  sudo nginx -t
+  108  sudo vim /etc/nginx/nginx.conf
+  109  sudo nginx -t
+  110  sudo vim /etc/nginx/nginx.conf
+  111  sudo vim ./sites-available/default
+  112  clear
+  113  cd conf.d/
+  114  clear
+  115  touch jenkins.conf
+  116  sudo touch jenkins.conf
+  117  clear
+  118  sudo ls -ltr
+  119  sudo rm -f jenkins.conf
+  120  cd ..
+  121  cd sites-available/
+  122  ls -ltr
+  123  vi default
+  124  sudo vi default
+  125  ifconfig
+  126  sudo vi default
+  127  kubectl get all -n jenkinns
+  128  kubectl get all -n jenkins
+  129  sudo vi default
+  130  sudo nginx -t
+  131  sudo nginx -s reload
+  132  sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+  133  rm -f /etc/nginx/sites-enabled/default
+  134  sudo rm -f /etc/nginx/sites-enabled/default
+  135  sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+  136  sudo nginx -s reload
+  137  sudo vi default
+  138  sudo nginx -s reload
+  139  sudo vi default
+  140  sudo nginx -s reload
+  141  sudo ls -ltr
+  142  sudo vim default
+  143  cat default
+  144  telnet 172.31.11.131 31264
+  145  kubectl cluster-info
+  146  telnet 192.168.49.2 31264
+  147  sudo vim default
+  148  sudo nginx -s reload
+  149  clear
+  150  vim default
+  151  sudo vim default
+  152  clear
+  153  kubectl cluster-info
+  154  pwd
+  155  vim default
+  156  kubectl get all -n nginx
+  157  kubectl get all -n jenkins
+  158  sudo vim default
+  159  ls -ld /etc/nginx/sites-enabled/default
+  160  sudo nginx -s reload
+  161  sudo vim default
+  162  sudo nginx -s reload
+  163  kubectl describe pod jenkins-7cd44b9947-8np4d -n jenkins | grep IP
+  164  clear
+  165  kubectl create clusterrolebinding permissive-binding --clusterrole=cluster-admin --user=admin --user=kubelet --group=system:serviceaccounts
+  166  clear
+  167  cd /data/
+  168  sudo ip-update.sh
+  169  sudo vim ip-update.sh
+  170  cd
+  171  vim jenkins-deployment.yaml
+  172  kubectl apply -f jenkins-deployment.yaml
+  173  kubectl get all -n jenkins
+  174  kubectl describe pod jenkins-6756cb797 -n jenkins | grep IP
